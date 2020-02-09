@@ -6,12 +6,12 @@ public class Attacker : MonoBehaviour
 {
     [Range(0f, 5f)]
     [SerializeField] float currentSpeed = 1f;
+    [SerializeField] int health = 500;
     
     void Start()
     {
         
     }
-
 
     void Update()
     {
@@ -21,5 +21,15 @@ public class Attacker : MonoBehaviour
     public void SetMovementSpeed(float speed)
     {
         currentSpeed = speed;
+    }
+
+    public void DealDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            // play death animation
+            Destroy(gameObject);
+        }
     }
 }
