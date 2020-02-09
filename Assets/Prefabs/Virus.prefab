@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6990715227424738135}
   - component: {fileID: 601076389}
   - component: {fileID: 50543537263841850}
+  - component: {fileID: 601076391}
   m_Layer: 0
   m_Name: Virus
   m_TagString: Attacker
@@ -113,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c490c210c7974cc380276e700caf88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.75
+  currentSpeed: 1
 --- !u!50 &50543537263841850
 Rigidbody2D:
   serializedVersion: 4
@@ -135,3 +136,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &601076391
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6990715227424738132}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00394845, y: -0.02763915}
+  serializedVersion: 2
+  m_Radius: 0.29440308
