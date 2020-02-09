@@ -19,11 +19,6 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    public void GetDamage()
-    {
-        return;
-    }
-
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
