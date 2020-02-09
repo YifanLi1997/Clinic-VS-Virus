@@ -7,11 +7,11 @@ public class AttackerSpawner : MonoBehaviour
 {
     // config
     [SerializeField] Attacker attackerPrefab;
+    [SerializeField] float maxSpawnGap = 5f;
+    [SerializeField] float minSpawnGap = 1f;
 
     // state var
     bool spawning = true;
-    float maxSpawnGap = 5f;
-    float minSpawnGap = 1f;
 
     // for view
     [SerializeField] float spawnGap;

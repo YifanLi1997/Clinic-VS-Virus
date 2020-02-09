@@ -7,6 +7,14 @@ TextureImporter:
     21300004: needle_2
     21300006: needle_3
     21300008: needle_4
+    21300010: needle_5
+    21300012: needle_6
+    21300014: needle_7
+    21300016: needle_8
+    21300018: needle_9
+    21300020: needle_10
+    21300022: needle_11
+    21300024: needle_12
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -104,6 +112,166 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54b624c6c841465e8c4dd5b79762bfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: needle_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a13984e5ba444accab2dcfc92717372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: needle_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8c398c6fa664ece872771b76a48fd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: needle_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2286dcce463044b5adbb2c39c98276b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: needle_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08dccd173a62245938376b07be704edc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: needle_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c116841c5a1a493e9b1813ff52f5f7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: needle_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e192f03633c44d69c47981fc517bf0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: needle_7
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c777bebbf5d9b4d94b37b65b89613a00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: needle_8
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 160
         width: 160
         height: 160
@@ -114,13 +282,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 718373f03fcee4ea3a66af3be96be051
+      spriteID: 43d130ce8b10344a88a0c1afcdbef491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: needle_1
+      name: needle_9
       rect:
         serializedVersion: 2
         x: 160
@@ -134,13 +302,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab7fa233164584a4c99f7122772dbe13
+      spriteID: bfa67bfee470e4ce0997293493e7fbe8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: needle_2
+      name: needle_10
       rect:
         serializedVersion: 2
         x: 320
@@ -154,13 +322,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32b08f3c64a9d462291c3166ef9dbc99
+      spriteID: cc6e8820f4b0f4dc899c10807b97220a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: needle_3
+      name: needle_11
       rect:
         serializedVersion: 2
         x: 480
@@ -174,13 +342,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2333b6bc5738644b29474c9d2eefee25
+      spriteID: a83e22600891e4e29b7b8d2983a71729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: needle_4
+      name: needle_12
       rect:
         serializedVersion: 2
         x: 0
@@ -194,7 +362,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4e8d234d11f54c42a89c2be1fc1a0a3
+      spriteID: d272dc27a0307421c80d087080dce57e
       vertices: []
       indices: 
       edges: []
@@ -202,7 +370,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0dfef21af5d97492996c36f0140aa1fa
+    spriteID: cd1d93b40290648409ece23fec7c1aca
     vertices: []
     indices: 
     edges: []

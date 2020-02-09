@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attacker : MonoBehaviour
 {
     [Range(0f, 5f)]
-    [SerializeField] float moveSpeed = 1f;
+    [SerializeField] float currentSpeed = 1f;
     
     void Start()
     {
@@ -15,6 +15,11 @@ public class Attacker : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
+    }
+
+    public void SetMovementSpeed(float speed)
+    {
+        currentSpeed = speed;
     }
 }
