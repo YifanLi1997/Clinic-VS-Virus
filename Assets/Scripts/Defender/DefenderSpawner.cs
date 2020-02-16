@@ -25,6 +25,7 @@ public class DefenderSpawner : MonoBehaviour
     public void SetDefenderSelected(Defender defender)
     {
         defenderSelected = defender;
+        Debug.Log(defenderSelected.name);
     }
     
 
