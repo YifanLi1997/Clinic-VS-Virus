@@ -7,7 +7,7 @@ public class Cashier : MonoBehaviour
 {
 
     // For view purpose
-    [SerializeField] int points = 100;
+    [SerializeField] int points = 50;
 
     TextMeshProUGUI m_pointsText;
 

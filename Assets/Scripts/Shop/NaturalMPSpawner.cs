@@ -10,7 +10,7 @@ public class NaturalMPSpawner : MonoBehaviour
     // spawning time
     float minGapTime = 12f;
     float maxGapTime = 24f;
-    float spawningCount = 1f;
+    float spawningCount = 6f;
 
     // spawning position
     float minXOffest = -4.5f;
