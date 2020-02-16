@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5076345982027491652}
   - component: {fileID: 7857220894989020484}
   - component: {fileID: 3788309260540861740}
+  - component: {fileID: 236093361833016775}
   m_Layer: 0
   m_Name: Needle
   m_TagString: Untagged
@@ -194,6 +195,20 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6782822011232467569, guid: 37c0187ff1c1642e0886773dc92d8dec,
     type: 3}
   gunPosition: {fileID: 8134770385869326111}
+--- !u!114 &236093361833016775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192478859124479649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac0be4c2930f4a939d4648ff83ac3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  cost: 100
 --- !u!1 &8134770385869326111
 GameObject:
   m_ObjectHideFlags: 0
