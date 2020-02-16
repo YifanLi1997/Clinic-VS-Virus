@@ -9,27 +9,33 @@ public class Cashier : MonoBehaviour
     // For view purpose
     [SerializeField] int points = 100;
 
+    TextMeshProUGUI m_pointsText;
+
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<TextMeshProUGUI>().text = points.ToString();
+        m_pointsText = GetComponent<TextMeshProUGUI>();
+        m_pointsText.text = points.ToString();
     }
 
     public void AddPoints(int addedPoints)
     {
         points += addedPoints;
-        GetComponent<TextMeshProUGUI>().text = points.ToString();
+        m_pointsText.text = points.ToString();
     }
 
-    public bool SpendPoints(int spendedPoints)
+    public bool EnoughPointsOrNot(int spendedPoints)
     {
         if (points >= spendedPoints)
         {
-            points -= spendedPoints;
-            GetComponent<TextMeshProUGUI>().text = points.ToString();
             return true;
         }
         return false;
     }
 
+    public void SpendPoints(int spendedPoints)
+    {
+        points -= spendedPoints;
+        m_pointsText.text = points.ToString();
+    }
 }

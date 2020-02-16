@@ -9,9 +9,10 @@ public class Shooter : MonoBehaviour
 
     public void Fire()
     {
-        Instantiate(
+        var newProjectile = Instantiate(
             projectilePrefab,
             gunPosition.transform.position,
             transform.rotation);
+        newProjectile.transform.parent = transform;
     }
 }

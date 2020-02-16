@@ -30,8 +30,10 @@ public class DefenderSpawner : MonoBehaviour
 
     private void SpawnDefener(Defender defenderSelected)
     {
-        if (m_cashier.SpendPoints(defenderSelected.GetCost()))
+        var cost = defenderSelected.GetCost();
+        if (m_cashier.EnoughPointsOrNot(cost))
         {
+            m_cashier.SpendPoints(cost);
             var mousePos = GetClickedSquare();
             Instantiate(defenderSelected, mousePos, Quaternion.identity);
         }
