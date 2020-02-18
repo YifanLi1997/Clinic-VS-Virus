@@ -1463,11 +1463,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Virus Spawner
       objectReference: {fileID: 0}
-    - target: {fileID: 8612715163061472770, guid: ab68f4508dfd648a9814183f267730d8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8612715163061472773, guid: ab68f4508dfd648a9814183f267730d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1521,31 +1516,6 @@ PrefabInstance:
     - target: {fileID: 8612715163061472773, guid: ab68f4508dfd648a9814183f267730d8,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7324941572348387830, guid: ab68f4508dfd648a9814183f267730d8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7324941572553502999, guid: ab68f4508dfd648a9814183f267730d8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7324941573086970827, guid: ab68f4508dfd648a9814183f267730d8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7324941573581869711, guid: ab68f4508dfd648a9814183f267730d8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8612715163779455447, guid: ab68f4508dfd648a9814183f267730d8,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
