@@ -7,8 +7,9 @@ public class AttackerSpawner : MonoBehaviour
 {
     // config
     [SerializeField] Attacker attackerPrefab;
-    [SerializeField] float maxSpawnGap = 5f;
-    [SerializeField] float minSpawnGap = 1f;
+    [SerializeField] float initializationTime = 6f;
+    [SerializeField] float maxSpawnGap = 20f;
+    [SerializeField] float minSpawnGap = 5f;
 
     // state var
     bool spawning = true;
@@ -16,8 +17,16 @@ public class AttackerSpawner : MonoBehaviour
     // for view
     [SerializeField] float spawnGap;
 
-    IEnumerator Start()
+    void Start()
     {
+        StartCoroutine(WaitBeforeSpawn(initializationTime));
+    }
+
+    IEnumerator WaitBeforeSpawn(float initializationTime)
+    {
+        yield return new WaitForSeconds(initializationTime);
+        SpawnAttacker();
+
         while (spawning)
         {
             spawnGap = UnityEngine.Random.Range(minSpawnGap, maxSpawnGap);
@@ -30,9 +39,5 @@ public class AttackerSpawner : MonoBehaviour
     {
         var newAttacker = Instantiate(attackerPrefab, transform.position, transform.rotation);
         newAttacker.transform.parent = transform;
-    }
-
-    void Update()
-    {
     }
 }
