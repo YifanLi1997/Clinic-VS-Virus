@@ -5,7 +5,6 @@ using TMPro;
 
 public class Cashier : MonoBehaviour
 {
-
     // For view purpose
     [SerializeField] int points = 50;
 
