@@ -1,12 +1,14 @@
 fileFormatVersion: 2
-guid: f584cedc21f6c4f82b23b709eddabfb5
+guid: 5d15ee529ba484af7a72969b63902578
 TextureImporter:
   fileIDToRecycleName:
-    21300000: needle bullet_0
-    21300002: needle bullet_1
-    21300004: needle bullet_2
-    21300006: needle bullet_3
-    21300008: needle bullet_4
+    21300000: ma attack_0
+    21300002: ma attack_1
+    21300004: ma attack_2
+    21300006: ma attack_3
+    21300008: ma attack_4
+    21300010: ma attack_5
+    21300012: ma attack_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -50,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 330
+  spritePixelsToUnits: 140
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,7 +102,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: needle bullet_0
+      name: ma attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -114,13 +116,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03754042f82a24c79ac8089170fe610a
+      spriteID: 907be9e5c4ca04ac3b25bd38108d74f3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: needle bullet_1
+      name: ma attack_1
       rect:
         serializedVersion: 2
         x: 160
@@ -134,13 +136,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3354556bfc2e14bddbe6905a2a4a6fa0
+      spriteID: 35f07fc6cb58541c2add043739f6d1a1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: needle bullet_2
+      name: ma attack_2
       rect:
         serializedVersion: 2
         x: 320
@@ -154,13 +156,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 418b9033a4a6947098582f12af6572d1
+      spriteID: e921d167fe938486a8a07a39fbeba689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: needle bullet_3
+      name: ma attack_3
       rect:
         serializedVersion: 2
         x: 480
@@ -174,13 +176,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f0931013645f41a6adec380fc0b9e30
+      spriteID: 967235c4382c94a84950f49f32cf0cc7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: needle bullet_4
+      name: ma attack_4
       rect:
         serializedVersion: 2
         x: 0
@@ -194,7 +196,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cebdc5c518774bcb99a811e60dfafe0
+      spriteID: c18c35c7f5c6a4770b5b7b4873711247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ma attack_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 846815ef1171a40b694fc58df52c880d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ma attack_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9d6c4bd7587495da957188f2a14a6d
       vertices: []
       indices: 
       edges: []
@@ -202,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 314f7b3d1e1d6432796dc0df2e4e40f5
+    spriteID: 27e9db4b5aa8e4856875f7c6e588dc91
     vertices: []
     indices: 
     edges: []

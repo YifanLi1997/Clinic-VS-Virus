@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 8fb8e77f0d9ac461f81f097574096861
+guid: a939d7ccec2214570bba4fa1a5320a6a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: medical alcohol_0
-    21300002: medical alcohol_1
-    21300004: medical alcohol_2
-    21300006: medical alcohol_3
+    21300000: ma idle_0
+    21300002: ma idle_1
+    21300004: ma idle_2
+    21300006: ma idle_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 180
+  spritePixelsToUnits: 140
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +99,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: medical alcohol_0
+      name: ma idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,13 +113,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d6f276ca185a45a2838d6b481737592
+      spriteID: bdbf8b33938f94209a1f9a5c6caf88fc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: medical alcohol_1
+      name: ma idle_1
       rect:
         serializedVersion: 2
         x: 160
@@ -133,16 +133,16 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb3143ed6155b4e3d9df79375a575c20
+      spriteID: ddfdccbfd62ed48ee896a62663540320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: medical alcohol_2
+      name: ma idle_2
       rect:
         serializedVersion: 2
-        x: 320
+        x: 321
         y: 0
         width: 160
         height: 160
@@ -153,13 +153,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea7bcb8800f0e42b080caaeac1c7ab71
+      spriteID: 877aa4af376ad4141863ac624e894107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: medical alcohol_3
+      name: ma idle_3
       rect:
         serializedVersion: 2
         x: 480
@@ -173,7 +173,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afb0013846fe14b16915a2db6f1de1de
+      spriteID: 7d4786c4082314cb5a1eccec170f52a3
       vertices: []
       indices: 
       edges: []
@@ -181,7 +181,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4ba7781553fda47b9a4f48e28b7b212d
+    spriteID: f1dea3deedf3143228aa5c4ff9de9cfa
     vertices: []
     indices: 
     edges: []
