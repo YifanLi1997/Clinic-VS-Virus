@@ -16,16 +16,27 @@ public class HerbProjectile : Projectile
             GetComponent<CapsuleCollider2D>().enabled = false;
 
             var attacker = collision.GetComponent<Attacker>();
+            var slowColor = new Color32(221, 203, 191, 255);
+
             attacker.DealDamage(damage);
-            StartCoroutine(SlowAttackerDown(attacker));
+
+            StartCoroutine(SlowAttackerDown(attacker, slowColor));
         }
     }
 
-    IEnumerator SlowAttackerDown(Attacker attacker)
+    IEnumerator SlowAttackerDown(Attacker attacker,  Color32 slowColor)
     {
         attacker.SetSlowFactor(slowFactor);
-        yield return new WaitForSeconds(3f);
-        attacker.SetSlowFactor(1f);
+        attacker.SetColor(slowColor);
+
+        yield return new WaitForSeconds(2f);
+
+        if (attacker)
+        {
+            attacker.SetSlowFactor(1f);
+            attacker.SetColor(Color.white);
+        }
+
         Destroy(gameObject);
     }
 }

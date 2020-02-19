@@ -51,4 +51,14 @@ public class Attacker : MonoBehaviour
             Destroy(deathVFX, 1f);
         }
     }
+
+    public Color32 GetColor()
+    {
+        return gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color;
+    }
+
+    public void SetColor(Color32 color32)
+    {
+        gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = color32;
+    }
 }
