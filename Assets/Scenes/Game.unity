@@ -724,7 +724,7 @@ PrefabInstance:
     - target: {fileID: 3294980615935935232, guid: 6e016baf95c2d47e480b3df3797c5988,
         type: 3}
       propertyPath: points
-      value: 500
+      value: 900
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e016baf95c2d47e480b3df3797c5988, type: 3}
@@ -1292,80 +1292,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82cebef9969534b4f9b0a4ec0e703940, type: 3}
---- !u!1001 &7886345159404975979
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3246067665784408811, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_Name
-      value: Medical Alcohol
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246067665784408804, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246067665784408804, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246067665784408804, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246067665784408804, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246067665784408804, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246067665784408804, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246067665784408804, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246067665784408804, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246067665784408804, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246067665784408804, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246067665784408804, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5507485432319918438, guid: 2b935e17066c1423a8fcadf9c1b0cb18,
-        type: 3}
-      propertyPath: projectilePrefab
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2b935e17066c1423a8fcadf9c1b0cb18, type: 3}
 --- !u!1001 &7955619819257327618
 PrefabInstance:
   m_ObjectHideFlags: 0
