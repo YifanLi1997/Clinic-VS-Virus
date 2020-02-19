@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSpeed: 1
-  health: 200
+  health: 500
   deathVFXPrefab: {fileID: 541693593996977318, guid: 6bb6bdb856a834797810ce9da64ea65b,
     type: 3}
   deathSFX: {fileID: 8300000, guid: 740f1b77bc26a493bb2a9012a2119b75, type: 3}

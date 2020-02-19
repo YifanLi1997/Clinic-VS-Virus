@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1733818959063038294
+--- !u!1 &635863003500601746
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2674536626609675795}
-  - component: {fileID: 6424327980515942073}
+  - component: {fileID: 3873401087841666775}
+  - component: {fileID: 5330860506313655933}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -17,27 +17,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2674536626609675795
+--- !u!4 &3873401087841666775
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733818959063038294}
+  m_GameObject: {fileID: 635863003500601746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6192478859124479662}
+  m_Father: {fileID: 4984591532071210602}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6424327980515942073
+--- !u!212 &5330860506313655933
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733818959063038294}
+  m_GameObject: {fileID: 635863003500601746}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -68,7 +68,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: 76c8ac99cde064db89d9b51e1db66ebe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc9bb2def7cd24d3a81338b02d134459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &6192478859124479649
+--- !u!1 &4984591532071210597
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,43 +87,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6192478859124479662}
-  - component: {fileID: 5076345982027491652}
-  - component: {fileID: 3788309260540861740}
-  - component: {fileID: 236093361833016775}
-  - component: {fileID: 7436744599452586821}
-  - component: {fileID: 3444436822396957491}
+  - component: {fileID: 4984591532071210602}
+  - component: {fileID: 6245935119921033600}
+  - component: {fileID: 2616043909043783144}
+  - component: {fileID: 1412455216545998083}
+  - component: {fileID: 4544642378681789431}
+  - component: {fileID: 5789667454841604419}
   m_Layer: 0
-  m_Name: Needle
+  m_Name: Herb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6192478859124479662
+--- !u!4 &4984591532071210602
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6192478859124479649}
+  m_GameObject: {fileID: 4984591532071210597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7833170777050244356}
-  - {fileID: 2674536626609675795}
+  - {fileID: 8964919122247925184}
+  - {fileID: 3873401087841666775}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &5076345982027491652
+--- !u!50 &6245935119921033600
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6192478859124479649}
+  m_GameObject: {fileID: 4984591532071210597}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -137,61 +137,42 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3788309260540861740
+--- !u!114 &2616043909043783144
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6192478859124479649}
+  m_GameObject: {fileID: 4984591532071210597}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dd36863137924a56a33821f4745b242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 6782822011232467569, guid: 37c0187ff1c1642e0886773dc92d8dec,
+  projectilePrefab: {fileID: 6718218071460285907, guid: c95ed28bb3d83485b9640592a69a23ec,
     type: 3}
-  gunPosition: {fileID: 8134770385869326111}
---- !u!114 &236093361833016775
+  gunPosition: {fileID: 6933374848805019611}
+--- !u!114 &1412455216545998083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6192478859124479649}
+  m_GameObject: {fileID: 4984591532071210597}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bac0be4c2930f4a939d4648ff83ac3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  cost: 100
---- !u!95 &7436744599452586821
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6192478859124479649}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bdbe4b9c26d1e41a494cf521ebfd99db, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &3444436822396957491
+  cost: 150
+--- !u!61 &4544642378681789431
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6192478859124479649}
+  m_GameObject: {fileID: 4984591532071210597}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -211,7 +192,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.97255224, y: 0.9451046}
   m_EdgeRadius: 0
---- !u!1 &8134770385869326111
+--- !u!95 &5789667454841604419
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984591532071210597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5c9261b3f2b864d97b2bb34aee912f57, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &6933374848805019611
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7833170777050244356}
+  - component: {fileID: 8964919122247925184}
   m_Layer: 0
   m_Name: GunPosition
   m_TagString: Untagged
@@ -227,17 +227,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7833170777050244356
+--- !u!4 &8964919122247925184
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8134770385869326111}
+  m_GameObject: {fileID: 6933374848805019611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6192478859124479662}
+  m_Father: {fileID: 4984591532071210602}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
