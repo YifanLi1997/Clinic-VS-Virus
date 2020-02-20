@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7687129012105706}
   m_Layer: 0
   m_Name: First Aid
-  m_TagString: Untagged
+  m_TagString: Defender
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,30 +15,37 @@ public class Attacker : MonoBehaviour
     [SerializeField] GameObject deathVFXPrefab;
     [SerializeField] AudioClip deathSFX;
 
+    [Header("Attack")]
+    [SerializeField] int damage = 50;
+    GameObject currentTarget;
 
     void Update()
     {
         transform.Translate(Vector2.left * currentSpeed * slowFactor * Time.deltaTime);
+
+        UpdateAnimationState();
     }
 
-    public float GetMovementSpeed()
+    private void UpdateAnimationState()
     {
-        return currentSpeed;
+        if (!currentTarget)
+        {
+            GetComponent<Animator>().SetBool("isAttacking", false);  
+        }
     }
 
-    public void SetMovementSpeed(float speed)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-         currentSpeed = speed;
+        if (collision.gameObject.tag == "Defender")
+        {
+            currentTarget = collision.gameObject;
+            GetComponent<Animator>().SetBool("isAttacking", true);
+        }
     }
 
-    public float GetSlowFactor()
+    public void DoDamage()
     {
-        return slowFactor;
-    }
-
-    public void SetSlowFactor(float factor)
-    {
-        slowFactor = factor;
+        currentTarget.GetComponent<Defender>().DealDamage(damage);
     }
 
     public void DealDamage(int damage)
@@ -50,6 +58,26 @@ public class Attacker : MonoBehaviour
             Destroy(gameObject);
             Destroy(deathVFX, 1f);
         }
+    }
+
+    public float GetMovementSpeed()
+    {
+        return currentSpeed;
+    }
+
+    public void SetMovementSpeed(float speed)
+    {
+        currentSpeed = speed;
+    }
+
+    public float GetSlowFactor()
+    {
+        return slowFactor;
+    }
+
+    public void SetSlowFactor(float factor)
+    {
+        slowFactor = factor;
     }
 
     public Color32 GetColor()

@@ -151,6 +151,7 @@ MonoBehaviour:
   deathVFXPrefab: {fileID: 541693593996977318, guid: 6bb6bdb856a834797810ce9da64ea65b,
     type: 3}
   deathSFX: {fileID: 8300000, guid: 740f1b77bc26a493bb2a9012a2119b75, type: 3}
+  damage: 25
 --- !u!50 &50543537263841850
 Rigidbody2D:
   serializedVersion: 4
@@ -182,9 +183,9 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00394845, y: -0.02763915}
+  m_Offset: {x: -0.00394845, y: -0.023360014}
   serializedVersion: 2
-  m_Radius: 0.29440308
+  m_Radius: 0.37570667
