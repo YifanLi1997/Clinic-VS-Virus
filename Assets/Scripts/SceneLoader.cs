@@ -2,32 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] int timeToWait = 3;
-
-    int currentSceneIndex;
-    
-    void Start()
-	{
-        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-		if (currentSceneIndex == 0)
-		{
-            StartCoroutine(WaitAndLoad(timeToWait));
-		}
-    }
-
-    IEnumerator WaitAndLoad(int time)
-	{
-        yield return new WaitForSeconds(time);
-        LoadNextScene();
-    }
+    [SerializeField] GameObject loadingScreen;
+    [SerializeField] Slider slider;
+    [SerializeField] TextMeshProUGUI porgressText;
 
     public void LoadNextScene()
 	{
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
+
+    public void LoadNextSceneWithALoadingBar()
+    {
+        StartCoroutine(LoadAsynchronously());
+    }
+
+    IEnumerator LoadAsynchronously()
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            slider.value = progress;
+            porgressText.text = progress.ToString() + "%";
+            Debug.Log(progress);
+
+            yield return null;
+        }
+    }
 
     public void OnApplicationQuit()
     {
