@@ -13,7 +13,7 @@ public class HerbProjectile : Projectile
         if (collision.gameObject.tag == "Attacker")
         {
             GetComponent<SpriteRenderer>().enabled = false;
-            GetComponent<CapsuleCollider2D>().enabled = false;
+            GetComponent<CircleCollider2D>().enabled = false;
 
             var attacker = collision.GetComponent<Attacker>();
             var slowColor = new Color32(221, 203, 191, 255);
