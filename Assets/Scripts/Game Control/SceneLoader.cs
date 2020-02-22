@@ -7,6 +7,7 @@ using TMPro;
 
 public class SceneLoader : MonoBehaviour
 {
+    [Header("[Optional] Loading Screen")]
     [SerializeField] GameObject loadingScreen;
     [SerializeField] Slider slider;
     [SerializeField] TextMeshProUGUI porgressText;

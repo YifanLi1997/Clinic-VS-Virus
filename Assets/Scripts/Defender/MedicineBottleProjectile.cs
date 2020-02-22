@@ -14,6 +14,12 @@ public class MedicineBottleProjectile : Projectile
 
             StartCoroutine(BlinkColor(attacker));
         }
+
+        if (collision.gameObject.tag == "Boss")
+        {
+            collision.GetComponent<Boss>().DealDamage(damage);
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator BlinkColor(Attacker attacker)

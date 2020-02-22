@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class FreedomOfSpeech : MonoBehaviour
 {
-    GameObject m_fakeBoss;
-    GameObject m_realBoss;
+    [Tooltip("Time (in seconds) before destroying virus spawners after real boss comes")]
+    [SerializeField] float waitingTime = 24f;
+
+    GameObject m_FakeBoss;
+    GameObject m_RealBoss;
+    GameObject m_VirusSpawner;
 
     private void Start()
     {
-        m_realBoss = GameObject.Find("Real Boss");
-        m_fakeBoss = GameObject.Find("Fake Boss");
+        m_RealBoss = GameObject.Find("Real Boss");
+        m_FakeBoss = GameObject.Find("Fake Boss");
+        m_VirusSpawner = GameObject.Find("Virus Spawner");
     }
 
     public void TriggerBosses()
@@ -18,17 +23,19 @@ public class FreedomOfSpeech : MonoBehaviour
         FakeBossOut();
 
         StartCoroutine(WaitAndRealBossIn());
+
+        Destroy(m_VirusSpawner, waitingTime);
     }
 
     IEnumerator WaitAndRealBossIn()
     {
-        if (m_realBoss)
+        if (m_RealBoss)
         {
-            m_realBoss.GetComponent<Animator>().SetBool("isWalking", true);
+            m_RealBoss.GetComponent<Animator>().SetBool("isWalking", true);
 
             yield return new WaitForSeconds(2f);
 
-            m_realBoss.GetComponent<AudioSource>().mute = false;
+            m_RealBoss.GetComponent<AudioSource>().mute = false;
         }
         else
         {
@@ -39,8 +46,8 @@ public class FreedomOfSpeech : MonoBehaviour
 
     private void FakeBossOut()
     {
-        m_fakeBoss.GetComponent<Animator>().SetTrigger("FakeBossOut");
-        m_fakeBoss.GetComponent<AudioSource>().mute = true;
+        m_FakeBoss.GetComponent<Animator>().SetTrigger("FakeBossOut");
+        m_FakeBoss.GetComponent<AudioSource>().mute = true;
     }
 
 

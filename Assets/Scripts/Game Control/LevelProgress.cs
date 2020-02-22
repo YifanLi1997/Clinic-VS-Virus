@@ -6,12 +6,11 @@ using UnityEngine.UI;
 public class LevelProgress : MonoBehaviour
 {
     [Tooltip("level time in SECONDS")]
-    [SerializeField] float levelTime = 60f;
-    [SerializeField] Slider progress;
+    [SerializeField] float levelTime = 10f;
 
     void Update()
     {
-        progress.value = Time.timeSinceLevelLoad / levelTime;
+        GetComponent<Slider>().value = Time.timeSinceLevelLoad / levelTime;
 
         if (Time.timeSinceLevelLoad >= levelTime)
         {

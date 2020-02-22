@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3135e6707b0c1409f90982b610a05459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitingTime: 24
 --- !u!114 &8368141174288289094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  cost: 100
+  cost: 5000
 --- !u!82 &383722764
 AudioSource:
   m_ObjectHideFlags: 0

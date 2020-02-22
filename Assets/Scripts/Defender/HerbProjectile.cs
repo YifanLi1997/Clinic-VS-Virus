@@ -22,6 +22,12 @@ public class HerbProjectile : Projectile
 
             StartCoroutine(SlowAttackerDown(attacker, slowColor));
         }
+
+        if (collision.gameObject.tag == "Boss")
+        {
+            collision.GetComponent<Boss>().DealDamage(damage);
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator SlowAttackerDown(Attacker attacker,  Color32 slowColor)
