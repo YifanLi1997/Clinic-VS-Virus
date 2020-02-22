@@ -9,19 +9,18 @@ public class Cashier : MonoBehaviour
     // For view purpose
     [SerializeField] int points = 50;
 
-    TextMeshProUGUI m_pointsText;
+    [SerializeField] TextMeshProUGUI pointsTMP;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_pointsText = GetComponent<TextMeshProUGUI>();
-        m_pointsText.text = points.ToString();
+        pointsTMP.text = points.ToString();
     }
 
     public void AddPoints(int addedPoints)
     {
         points += addedPoints;
-        m_pointsText.text = points.ToString();
+        pointsTMP.text = points.ToString();
     }
 
     public bool EnoughPointsOrNot(int spendedPoints)
@@ -36,6 +35,6 @@ public class Cashier : MonoBehaviour
     public void SpendPoints(int spendedPoints)
     {
         points -= spendedPoints;
-        m_pointsText.text = points.ToString();
+        pointsTMP.text = points.ToString();
     }
 }
