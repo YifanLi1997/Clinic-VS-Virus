@@ -19,7 +19,15 @@ public class DefenderSpawner : MonoBehaviour
 
     private void OnMouseDown()
     {
-        SpawnDefener(defenderSelected);
+        if (defenderSelected)
+        {
+            SpawnDefener(defenderSelected);
+        }
+        else
+        {
+            Debug.LogError("No defender is selected to spawen!");
+        }
+        
     }
 
     public void SetDefenderSelected(Defender defender)
