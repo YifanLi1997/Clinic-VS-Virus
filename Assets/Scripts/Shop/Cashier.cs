@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class Cashier : MonoBehaviour
 {
@@ -11,10 +12,23 @@ public class Cashier : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI pointsTMP;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         pointsTMP.text = points.ToString();
+    }
+
+    private void Update()
+    {
+        AddPointsInBackDoor();
+    }
+
+    private void AddPointsInBackDoor()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            AddPoints(1000);
+        }
     }
 
     public void AddPoints(int addedPoints)
