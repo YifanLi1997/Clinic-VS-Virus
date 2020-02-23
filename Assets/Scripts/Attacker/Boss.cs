@@ -61,7 +61,7 @@ public class Boss : MonoBehaviour
             GetComponent<Animator>().SetTrigger("die");
             GetComponent<AudioSource>().mute = true;
 
-            AudioSource.PlayClipAtPoint(deathSFX, transform.position, 0.03f);
+            AudioSource.PlayClipAtPoint(deathSFX, transform.position, 1f);
         }
     }
 }

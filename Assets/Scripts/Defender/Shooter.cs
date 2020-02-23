@@ -40,6 +40,10 @@ public class Shooter : MonoBehaviour
         {
             m_animator.SetBool("isAttacking", true);
         }
+        else
+        {
+            m_animator.SetBool("isAttacking", false);
+        }
         
     }
 
