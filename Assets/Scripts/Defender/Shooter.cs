@@ -8,7 +8,7 @@ public class Shooter : MonoBehaviour
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] GameObject gunPosition;
 
-    GameObject m_boss;
+    Boss m_boss;
     Animator m_animator;
     AttackerSpawner m_attackerSpawner;
 
@@ -16,7 +16,7 @@ public class Shooter : MonoBehaviour
     {
         m_animator = GetComponent<Animator>();
         m_attackerSpawner = FindMySpawner();
-        m_boss = GameObject.Find("Real Boss");
+        m_boss = GameObject.Find("Real Boss").GetComponent<Boss>();
     }
 
     private void Update()
@@ -36,11 +36,12 @@ public class Shooter : MonoBehaviour
         }
 
 
-        if (m_boss.GetComponent<Boss>().GetIsActive())
+        if (m_boss.GetIsActive())
         {
             m_animator.SetBool("isAttacking", true);
         }
-        else
+
+        if(m_boss.GetIsDead())
         {
             m_animator.SetBool("isAttacking", false);
         }

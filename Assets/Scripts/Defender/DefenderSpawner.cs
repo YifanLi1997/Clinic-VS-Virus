@@ -25,7 +25,7 @@ public class DefenderSpawner : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No defender is selected to spawen!");
+            return;
         }
         
     }

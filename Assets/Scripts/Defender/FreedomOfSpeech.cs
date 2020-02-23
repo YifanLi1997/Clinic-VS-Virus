@@ -29,7 +29,7 @@ public class FreedomOfSpeech : MonoBehaviour
 
     IEnumerator WaitAndRealBossIn()
     {
-        if (m_RealBoss)
+        if (!m_RealBoss.GetComponent<Boss>().GetIsActive())
         {
             m_RealBoss.GetComponent<Animator>().SetBool("isWalking", true);
 
@@ -37,11 +37,6 @@ public class FreedomOfSpeech : MonoBehaviour
 
             m_RealBoss.GetComponent<AudioSource>().mute = false;
         }
-        else
-        {
-            Debug.LogError("no real boss found!");
-        }
-
     }
 
     private void FakeBossOut()

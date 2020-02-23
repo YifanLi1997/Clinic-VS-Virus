@@ -12,6 +12,12 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] Slider slider;
     [SerializeField] TextMeshProUGUI porgressText;
 
+    public void LoadStartScene()
+    {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1;
+    }
+
     public void LoadNextScene()
 	{
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -19,20 +25,19 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadNextSceneWithALoadingBar()
     {
+        loadingScreen.SetActive(true);
         StartCoroutine(LoadAsynchronously());
     }
 
     IEnumerator LoadAsynchronously()
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-        loadingScreen.SetActive(true);
 
         while (!operation.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
+            float progress = Mathf.Clamp01(operation.progress / .91f);
             slider.value = progress;
-            porgressText.text = progress.ToString() + "%";
-            Debug.Log(progress);
+            porgressText.text = Mathf.RoundToInt(progress*100).ToString() + "%";
 
             yield return null;
         }

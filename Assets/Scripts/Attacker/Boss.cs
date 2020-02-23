@@ -14,6 +14,7 @@ public class Boss : MonoBehaviour
 
     // for visualization
     [SerializeField] bool isActive = false;
+    [SerializeField] bool isDead = false;
     [SerializeField] int currentHealth = 6666;
 
     private void Start()
@@ -44,6 +45,11 @@ public class Boss : MonoBehaviour
         return isActive;
     }
 
+    public bool GetIsDead()
+    {
+        return isDead;
+    }
+
     void Update()
     {
         transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
@@ -56,7 +62,7 @@ public class Boss : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            isActive = false;
+            isDead = true;
             GetComponent<PolygonCollider2D>().enabled = false;
             GetComponent<Animator>().SetTrigger("die");
             GetComponent<AudioSource>().mute = true;
