@@ -3329,5 +3329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteScreenTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 8330262565313223260, guid: 50f7e46db6a1245509818121ab4def0d,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bfe66ec4c6fac430faf71a758888a230, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f7e46db6a1245509818121ab4def0d, type: 3}
