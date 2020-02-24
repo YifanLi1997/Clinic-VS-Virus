@@ -45,7 +45,10 @@ public class Attacker : MonoBehaviour
 
     public void DoDamage()
     {
-        currentTarget.GetComponent<Defender>().DealDamage(damage);
+        if (currentTarget)
+        {
+            currentTarget.GetComponent<Defender>().DealDamage(damage);
+        }
     }
 
     public void DealDamage(int damage)

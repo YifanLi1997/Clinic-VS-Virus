@@ -12,10 +12,15 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] Slider slider;
     [SerializeField] TextMeshProUGUI porgressText;
 
-    public void LoadStartScene()
+    public void LoadStartScreen()
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
+    }
+
+    public void LoadOptionsScreen()
+    {
+        SceneManager.LoadScene("Options Screen");
     }
 
     public void LoadNextScene()
