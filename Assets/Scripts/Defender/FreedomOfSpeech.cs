@@ -46,12 +46,4 @@ public class FreedomOfSpeech : MonoBehaviour
         m_fakeBoss.GetComponent<Animator>().SetTrigger("FakeBossOut");
         m_fakeBoss.GetComponent<AudioSource>().mute = true;
     }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

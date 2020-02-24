@@ -10,10 +10,12 @@ public class DefenderSpawner : MonoBehaviour
     Defender defenderSelected;
 
     Cashier m_cashier;
+    GameObject m_defenders;
 
     private void Start()
     {
         m_cashier = FindObjectOfType<Cashier>();
+        m_defenders = GameObject.Find("Defenders");
     }
 
 
@@ -43,7 +45,9 @@ public class DefenderSpawner : MonoBehaviour
         {
             m_cashier.SpendPoints(cost);
             var mousePos = GetClickedSquare();
-            Instantiate(defenderSelected, mousePos, Quaternion.identity);
+            var newDefender = Instantiate(defenderSelected, mousePos, Quaternion.identity);
+            newDefender.gameObject.transform.parent = m_defenders.transform;
+
         }
         else
         {
