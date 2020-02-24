@@ -50,6 +50,8 @@ public class SceneLoader : MonoBehaviour
 
     public void OnApplicationQuit()
     {
+        PlayerPrefsController.SetVolume(0.5f);
+        PlayerPrefsController.SetDifficulty(1);
         Application.Quit();
     }
 }
