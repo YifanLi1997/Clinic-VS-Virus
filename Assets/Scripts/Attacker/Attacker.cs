@@ -19,6 +19,13 @@ public class Attacker : MonoBehaviour
     [SerializeField] int damage = 50;
     GameObject currentTarget;
 
+    LevelController m_levelController;
+
+    private void Start()
+    {
+        m_levelController = FindObjectOfType<LevelController>();
+    }
+
     void Update()
     {
         transform.Translate(Vector2.left * currentSpeed * slowFactor * Time.deltaTime);
@@ -54,6 +61,7 @@ public class Attacker : MonoBehaviour
     public void DealDamage(int damage)
     {
         health -= damage;
+
         if (health <= 0)
         {
             var deathVFX = Instantiate(deathVFXPrefab, transform.position, transform.rotation);
