@@ -641,8 +641,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSpeed: 1
-  fullHealth: 6666
+  fullHealth: 10000
   deathSFX: {fileID: 8300000, guid: 9a03e53b2dab540888b5d2f38777ebef, type: 3}
   healthBar: {fileID: 777715873378925364}
   isActive: 0
-  currentHealth: 2222
+  isDead: 0
+  currentHealth: 10000
