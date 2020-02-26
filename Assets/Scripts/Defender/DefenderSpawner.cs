@@ -11,6 +11,7 @@ public class DefenderSpawner : MonoBehaviour
 
     Cashier m_cashier;
     GameObject m_defenders;
+    int m_cost;
 
     private void Start()
     {
@@ -40,10 +41,29 @@ public class DefenderSpawner : MonoBehaviour
 
     private void SpawnDefener(Defender defenderSelected)
     {
-        var cost = defenderSelected.GetCost();
-        if (m_cashier.EnoughPointsOrNot(cost))
+        if (defenderSelected.GetComponent<FreedomOfSpeech>())
         {
-            m_cashier.SpendPoints(cost);
+            if (PlayerPrefsController.GetDifficulty() == 0)
+            {
+                m_cost = 2500;
+            }
+            else if (PlayerPrefsController.GetDifficulty() == 1)
+            {
+                m_cost = 5000;
+            }
+            else
+            {
+                m_cost = 7500;
+            }
+        }
+        else
+        {
+            m_cost = defenderSelected.GetCost();
+        }
+        
+        if (m_cashier.EnoughPointsOrNot(m_cost))
+        {
+            m_cashier.SpendPoints(m_cost);
             var mousePos = GetClickedSquare();
             var newDefender = Instantiate(defenderSelected, mousePos, Quaternion.identity);
             newDefender.gameObject.transform.parent = m_defenders.transform;

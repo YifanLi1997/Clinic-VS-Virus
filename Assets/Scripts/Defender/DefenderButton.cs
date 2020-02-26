@@ -18,10 +18,6 @@ public class DefenderButton : MonoBehaviour
         m_defenderSpawner = FindObjectOfType<DefenderSpawner>();
         m_defenderButtons = FindObjectsOfType<DefenderButton>();
         m_text = GetComponentInChildren<TextMeshProUGUI>();
-    }
-
-    private void Update()
-    {
         m_text.text = cost.ToString();
     }
 
@@ -39,6 +35,7 @@ public class DefenderButton : MonoBehaviour
     public void SetCost(int mp)
     {
         cost = mp;
+        m_text.text = cost.ToString();
     }
 
 

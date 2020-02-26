@@ -26,6 +26,4 @@ public class DifficultyController : MonoBehaviour
             m_FOSButton.GetComponent<DefenderButton>().SetCost(7500);
         }
     }
-
-
 }

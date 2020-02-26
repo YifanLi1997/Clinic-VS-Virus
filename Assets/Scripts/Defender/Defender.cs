@@ -15,6 +15,11 @@ public class Defender : MonoBehaviour
         return cost;
     }
 
+    public void SetCost(int c)
+    {
+        cost = c;
+    }
+
     public void DealDamage(int damage)
     {
         health -= damage;
