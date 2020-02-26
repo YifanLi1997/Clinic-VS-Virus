@@ -37,6 +37,7 @@ public class Boss : MonoBehaviour
         if (currentSpeed > 0)
         {
             isActive = true;
+            GetComponent<PolygonCollider2D>().enabled = true;
         }
     }
 
@@ -65,7 +66,6 @@ public class Boss : MonoBehaviour
             isDead = true;
             GetComponent<PolygonCollider2D>().enabled = false;
             GetComponent<Animator>().SetTrigger("die");
-            GetComponent<AudioSource>().mute = true;
 
             AudioSource.PlayClipAtPoint(
                 deathSFX,

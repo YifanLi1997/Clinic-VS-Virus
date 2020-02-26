@@ -15,4 +15,5 @@ public class FirstAidBox : Defender
         newMedicalPoints = Instantiate(medicalPointsPrefab, spawningPos, transform.rotation);
         Destroy(newMedicalPoints.gameObject, 6f);
     }
+
 }

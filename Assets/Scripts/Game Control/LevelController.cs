@@ -16,16 +16,16 @@ public class LevelController : MonoBehaviour
     {
         numberOfAttackers = FindObjectsOfType<Attacker>().Length;
 
-        if (levelProgress.GetIsLevelProgressCompleted() && numberOfAttackers == 0)
+        if (realBoss.GetIsActive())
         {
-            if (realBoss.GetIsActive())
+            if (realBoss.GetIsDead())
             {
-                if (realBoss.GetIsDead())
-                {
-                    StartCoroutine(WaitAndEnd(trueWinnerPanel, 2f));
-                }
+                StartCoroutine(WaitAndEnd(trueWinnerPanel, 2f));
             }
-            else
+        }
+        else
+        {
+            if (levelProgress.GetIsLevelProgressCompleted() && numberOfAttackers == 0)
             {
                 StartCoroutine(WaitAndEnd(winWithoutFreedonPanel, 1f));
             }

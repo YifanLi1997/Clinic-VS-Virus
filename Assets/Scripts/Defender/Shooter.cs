@@ -8,6 +8,8 @@ public class Shooter : MonoBehaviour
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] GameObject gunPosition;
 
+    [SerializeField] bool isAttackerInLane;
+
     Boss m_boss;
     Animator m_animator;
     AttackerSpawner m_attackerSpawner;
@@ -23,6 +25,7 @@ public class Shooter : MonoBehaviour
     {
         if (m_attackerSpawner)
         {
+            isAttackerInLane = IsAttackerInLane();
             if (IsAttackerInLane())
             {
                 // shoot
