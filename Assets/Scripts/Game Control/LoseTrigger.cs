@@ -7,6 +7,7 @@ public class LoseTrigger : MonoBehaviour
     [SerializeField] Boss realBoss;
     [SerializeField] GameObject loserWithFreedomPanel;
     [SerializeField] GameObject loserPanel;
+    [SerializeField] GameObject clickBlocker;
 
     AudioSource[] m_audioSources;
 
@@ -22,11 +23,15 @@ public class LoseTrigger : MonoBehaviour
         if (realBoss.GetIsActive())
         {
             loserWithFreedomPanel.SetActive(true);
+            loserWithFreedomPanel.GetComponent<AudioSource>().volume = PlayerPrefsController.GetVolume();
+            clickBlocker.SetActive(true);
             Time.timeScale = 0;
         }
         else
         {
             loserPanel.SetActive(true);
+            loserPanel.GetComponent<AudioSource>().volume = PlayerPrefsController.GetVolume();
+            clickBlocker.SetActive(true);
             Time.timeScale = 0;
         }
     }

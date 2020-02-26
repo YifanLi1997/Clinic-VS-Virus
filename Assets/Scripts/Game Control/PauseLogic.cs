@@ -8,6 +8,7 @@ public class PauseLogic : MonoBehaviour
     public static bool gameIsPaused;
 
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject clickBlocker;
 
     void Update()
     {
@@ -28,6 +29,7 @@ public class PauseLogic : MonoBehaviour
     public void Pause()
     {
         pauseMenu.SetActive(true);
+        clickBlocker.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
     }
@@ -35,6 +37,7 @@ public class PauseLogic : MonoBehaviour
     public void Resume()
     {
         pauseMenu.SetActive(false);
+        clickBlocker.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
     }

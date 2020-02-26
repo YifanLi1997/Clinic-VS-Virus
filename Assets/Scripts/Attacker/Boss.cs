@@ -69,8 +69,8 @@ public class Boss : MonoBehaviour
 
             AudioSource.PlayClipAtPoint(
                 deathSFX,
-                transform.position,
-                Mathf.Clamp01(PlayerPrefsController.GetVolume() * 5));
+                Camera.main.transform.position,
+                PlayerPrefsController.GetVolume());
         }
     }
 }

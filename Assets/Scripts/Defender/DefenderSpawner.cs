@@ -51,7 +51,10 @@ public class DefenderSpawner : MonoBehaviour
         }
         else
         {
-            AudioSource.PlayClipAtPoint(spawnFailed, transform.position);
+            AudioSource.PlayClipAtPoint(
+                spawnFailed,
+                Camera.main.transform.position,
+                PlayerPrefsController.GetVolume());
         }
     }
 

@@ -20,16 +20,19 @@ public class LevelProgress : MonoBehaviour
 
     void Update()
     {
-        GetComponent<Slider>().value = Time.timeSinceLevelLoad / levelTime;
-
-        if (Time.timeSinceLevelLoad >= levelTime)
+        if (!isLevelProgressCompleted)
         {
-            isLevelProgressCompleted = true;
-            progressHandle.SetTrigger("isEnded");
+            GetComponent<Slider>().value = Time.timeSinceLevelLoad / levelTime;
 
-            foreach (var spawner in m_attackerSpawners)
+            if (Time.timeSinceLevelLoad >= levelTime)
             {
-                spawner.SetSpawning(false);
+                isLevelProgressCompleted = true;
+                progressHandle.SetTrigger("isEnded");
+
+                foreach (var spawner in m_attackerSpawners)
+                {
+                    spawner.SetSpawning(false);
+                }
             }
         }
     }
@@ -37,5 +40,20 @@ public class LevelProgress : MonoBehaviour
     public bool GetIsLevelProgressCompleted()
     {
         return isLevelProgressCompleted;
+    }
+
+    public void SetIsLevelProgressCompleted(bool complete)
+    {
+        if (complete)
+        {
+            isLevelProgressCompleted = true;
+            GetComponent<Slider>().value = 1f;
+            progressHandle.SetTrigger("isEnded");
+
+            foreach (var spawner in m_attackerSpawners)
+            {
+                spawner.SetSpawning(false);
+            }
+        }
     }
 }

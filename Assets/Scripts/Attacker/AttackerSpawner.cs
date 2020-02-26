@@ -13,22 +13,22 @@ public class AttackerSpawner : MonoBehaviour
 
     // state var
     [SerializeField] bool m_spawning = true;
-    LevelController m_levelController;
 
     // for view
     [SerializeField] float spawnGap;
 
     void Start()
     {
-        m_levelController = FindObjectOfType<LevelController>();
-
         StartCoroutine(WaitBeforeSpawn(initializationTime));
     }
 
     IEnumerator WaitBeforeSpawn(float initializationTime)
     {
         yield return new WaitForSeconds(initializationTime);
-        SpawnAttacker();
+        if (m_spawning)
+        {
+            SpawnAttacker();
+        }
 
         while (m_spawning)
         {

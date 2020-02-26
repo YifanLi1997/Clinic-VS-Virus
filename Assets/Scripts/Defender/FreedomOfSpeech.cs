@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FreedomOfSpeech : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class FreedomOfSpeech : MonoBehaviour
             yield return new WaitForSeconds(2f);
 
             m_realBoss.GetComponent<AudioSource>().mute = false;
+            FindObjectOfType<LevelProgress>().SetIsLevelProgressCompleted(true);
         }
     }
 

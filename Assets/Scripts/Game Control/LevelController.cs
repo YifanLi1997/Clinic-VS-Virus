@@ -6,6 +6,7 @@ public class LevelController : MonoBehaviour
 {
     [SerializeField] GameObject trueWinnerPanel;
     [SerializeField] GameObject winWithoutFreedonPanel;
+    [SerializeField] GameObject clickBlocker;
 
     [SerializeField] Boss realBoss;
     [SerializeField] LevelProgress levelProgress;
@@ -19,14 +20,14 @@ public class LevelController : MonoBehaviour
 
         if (realBoss.GetIsActive())
         {
-            if (realBoss.GetIsDead())
+            if (realBoss.GetIsDead() && numberOfAttackers == 0)
             {
-                StartCoroutine(WaitAndEnd(trueWinnerPanel, 2f));
+                StartCoroutine(WaitAndEnd(trueWinnerPanel, 3f));
             }
         }
         else
         {
-            if (levelProgress.GetIsLevelProgressCompleted() && numberOfAttackers == 0)
+            if (levelProgress.GetIsLevelProgressCompleted() )
             {
                 StartCoroutine(WaitAndEnd(winWithoutFreedonPanel, 1f));
             }
@@ -45,6 +46,8 @@ public class LevelController : MonoBehaviour
         }
 
         panel.SetActive(true);
+        panel.GetComponent<AudioSource>().volume = PlayerPrefsController.GetVolume();
+        clickBlocker.SetActive(true);
         Time.timeScale = 0;
     }
 
