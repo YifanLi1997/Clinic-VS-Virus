@@ -20,6 +20,7 @@ public class Boss : MonoBehaviour
     private void Start()
     {
         healthBar.maxValue = fullHealth;
+        healthBar.value = currentHealth;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -54,13 +55,12 @@ public class Boss : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
-
-        healthBar.value = currentHealth;
     }
 
     public void DealDamage(int damage)
     {
         currentHealth -= damage;
+        healthBar.value = currentHealth;
         if (currentHealth <= 0)
         {
             isDead = true;

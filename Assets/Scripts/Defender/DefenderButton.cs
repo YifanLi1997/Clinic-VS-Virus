@@ -10,15 +10,12 @@ public class DefenderButton : MonoBehaviour
 
     DefenderSpawner m_defenderSpawner;
     DefenderButton[] m_defenderButtons;
-    TextMeshProUGUI m_text;
 
 
     private void Start()
     {
         m_defenderSpawner = FindObjectOfType<DefenderSpawner>();
         m_defenderButtons = FindObjectsOfType<DefenderButton>();
-        m_text = GetComponentInChildren<TextMeshProUGUI>();
-        m_text.text = cost.ToString();
     }
 
     private void OnMouseDown()
@@ -31,12 +28,4 @@ public class DefenderButton : MonoBehaviour
         GetComponent<SpriteRenderer>().color = Color.white;
         m_defenderSpawner.SetDefenderSelected(defenderPrefab);
     }
-
-    public void SetCost(int mp)
-    {
-        cost = mp;
-        m_text.text = cost.ToString();
-    }
-
-
 }

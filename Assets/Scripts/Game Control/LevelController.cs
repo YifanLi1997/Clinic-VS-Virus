@@ -50,6 +50,4 @@ public class LevelController : MonoBehaviour
         clickBlocker.SetActive(true);
         Time.timeScale = 0;
     }
-
-
 }

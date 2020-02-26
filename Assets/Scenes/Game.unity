@@ -833,6 +833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3ceab939627415593586af7c93cc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FOSButton: {fileID: 1780350509}
 --- !u!4 &1486984255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7955619818778835525, guid: 5d6af17cea01b4fa39b4abc915f1d7aa,
@@ -856,6 +857,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5416888539051426198, guid: 8aad844e0e2094cedbdf2cd00771e0da,
     type: 3}
   m_PrefabInstance: {fileID: 5416888539737537434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1780350509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1556352617871922338, guid: 30e1cd5a76bba42c78c1192844220c51,
+    type: 3}
+  m_PrefabInstance: {fileID: 951881768444702913}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1801015422
 GameObject:
@@ -1395,6 +1402,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bb226318b1804702a0d585b8d8fddab, type: 3}
+--- !u!114 &1512330921746204900 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1512330921425589728, guid: 4bb226318b1804702a0d585b8d8fddab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1512330921746204899}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5280318413d724876bc6274723b0be26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1777942295624049764 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1556352617871922341, guid: 30e1cd5a76bba42c78c1192844220c51,
@@ -2577,6 +2596,16 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 7.9553585
       objectReference: {fileID: 0}
+    - target: {fileID: 6543081412977041226, guid: 86f2048c9271a49c8a54a210df3bcd2f,
+        type: 3}
+      propertyPath: cashier
+      value: 
+      objectReference: {fileID: 1512330921746204900}
+    - target: {fileID: 6543081412977041226, guid: 86f2048c9271a49c8a54a210df3bcd2f,
+        type: 3}
+      propertyPath: defenders
+      value: 
+      objectReference: {fileID: 102019321}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86f2048c9271a49c8a54a210df3bcd2f, type: 3}
 --- !u!1001 &6795386930688360716

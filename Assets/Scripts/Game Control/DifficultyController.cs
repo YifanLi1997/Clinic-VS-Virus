@@ -1,29 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DifficultyController : MonoBehaviour
 {
+    [SerializeField] GameObject FOSButton;
+
     float m_difficultyLevel;
-    GameObject m_FOSButton;
+    TextMeshProUGUI m_FOSTextMesh;
 
     void Start()
     {
         m_difficultyLevel = PlayerPrefsController.GetDifficulty();
-
-        m_FOSButton = GameObject.Find("FOS Button");
+        m_FOSTextMesh = FOSButton.GetComponentInChildren<TextMeshProUGUI>();
 
         if (m_difficultyLevel == 0)
         {
-            m_FOSButton.GetComponent<DefenderButton>().SetCost(2500);
+            m_FOSTextMesh.text = 2500.ToString();
         }
         else if (m_difficultyLevel == 1)
         {
-            m_FOSButton.GetComponent<DefenderButton>().SetCost(5000);
+            m_FOSTextMesh.text = 5000.ToString();
         }
         else if (m_difficultyLevel == 2)
         {
-            m_FOSButton.GetComponent<DefenderButton>().SetCost(7500);
+            m_FOSTextMesh.text = 7500.ToString();
         }
     }
 }

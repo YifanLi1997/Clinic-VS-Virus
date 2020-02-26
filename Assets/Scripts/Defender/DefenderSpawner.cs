@@ -6,25 +6,18 @@ using UnityEngine;
 public class DefenderSpawner : MonoBehaviour
 {
     [SerializeField] AudioClip spawnFailed;
+    [SerializeField] Cashier cashier;
+    [SerializeField] GameObject defenders;
 
-    Defender defenderSelected;
-
-    Cashier m_cashier;
-    GameObject m_defenders;
+    Defender m_defenderSelected;
     int m_cost;
-
-    private void Start()
-    {
-        m_cashier = FindObjectOfType<Cashier>();
-        m_defenders = GameObject.Find("Defenders");
-    }
 
 
     private void OnMouseDown()
     {
-        if (defenderSelected)
+        if (m_defenderSelected)
         {
-            SpawnDefener(defenderSelected);
+            SpawnDefener(m_defenderSelected);
         }
         else
         {
@@ -35,11 +28,32 @@ public class DefenderSpawner : MonoBehaviour
 
     public void SetDefenderSelected(Defender defender)
     {
-        defenderSelected = defender;
+        m_defenderSelected = defender;
     }
     
 
     private void SpawnDefener(Defender defenderSelected)
+    {
+        CalculateCost(defenderSelected);
+
+        if (cashier.EnoughPointsOrNot(m_cost))
+        {
+            cashier.SpendPoints(m_cost);
+            var mousePos = GetClickedSquare();
+            var newDefender = Instantiate(defenderSelected, mousePos, Quaternion.identity);
+            newDefender.gameObject.transform.parent = defenders.transform;
+
+        }
+        else
+        {
+            AudioSource.PlayClipAtPoint(
+                spawnFailed,
+                Camera.main.transform.position,
+                PlayerPrefsController.GetVolume());
+        }
+    }
+
+    private void CalculateCost(Defender defenderSelected)
     {
         if (defenderSelected.GetComponent<FreedomOfSpeech>())
         {
@@ -59,22 +73,6 @@ public class DefenderSpawner : MonoBehaviour
         else
         {
             m_cost = defenderSelected.GetCost();
-        }
-        
-        if (m_cashier.EnoughPointsOrNot(m_cost))
-        {
-            m_cashier.SpendPoints(m_cost);
-            var mousePos = GetClickedSquare();
-            var newDefender = Instantiate(defenderSelected, mousePos, Quaternion.identity);
-            newDefender.gameObject.transform.parent = m_defenders.transform;
-
-        }
-        else
-        {
-            AudioSource.PlayClipAtPoint(
-                spawnFailed,
-                Camera.main.transform.position,
-                PlayerPrefsController.GetVolume());
         }
     }
 
