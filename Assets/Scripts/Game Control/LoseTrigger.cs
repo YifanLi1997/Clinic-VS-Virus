@@ -8,8 +8,17 @@ public class LoseTrigger : MonoBehaviour
     [SerializeField] GameObject loserWithFreedomPanel;
     [SerializeField] GameObject loserPanel;
 
+    AudioSource[] m_audioSources;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        m_audioSources = FindObjectsOfType<AudioSource>();
+
+        foreach (var m_audioSource in m_audioSources)
+        {
+            m_audioSource.mute = true;
+        }
+
         if (realBoss.GetIsActive())
         {
             loserWithFreedomPanel.SetActive(true);
